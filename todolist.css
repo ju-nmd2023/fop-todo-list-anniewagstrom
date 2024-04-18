@@ -6,7 +6,7 @@
 
 .background {
   width: 100%;
-  height: 1000px;
+  height: 900px;
   position: absolute;
   top: 0;
   left: 0;
@@ -25,27 +25,119 @@ h1 {
   text-align: center;
 }
 
-.container {
-  width: 200px;
-  height: 40px;
-  border-radius: 20px;
-  border-color: rgb(68, 142, 206);
-  background-color: aliceblue;
-  padding: 20px;
-  margin: auto;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 2px rgb(68, 142, 206);
-}
-
-.typeboxtext {
-  height: 20%;
+#input-text {
+  height: 100%;
   font-family: "quicksand";
   font-style: italic;
+  font-size: 15px;
   color: rgb(119, 112, 112);
   text-align: center;
   align-items: center;
   justify-content: center;
   display: flex;
+}
 
+#list-container {
+  width: 250px;
+  height: auto;
+  display: block;
+  text-align: center;
+}
+.row {
+  width: 200px;
+  margin-left: 615px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: aliceblue;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  transform: translateY(-50%);
+}
+
+input {
+  flex: 1;
+  border: rgb(68, 142, 206);
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: "quicksand";
+  padding: 10px;
+  background: rgb(68, 142, 206);
+  color:aliceblue;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-left: -20px;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
+ul {
+  padding: 0;
+  margin: auto;
+  display: block;
+  justify-content: center;
+}
+
+ul li {
+  list-style: none;
+  font-size: 15px;
+  font-family: "quicksand";
+  padding: 5px;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0;
+}
+
+ul li::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(images/circle.png);
+  margin-right: 15px;
+}
+
+ul li.check {
+  color: rgb(155, 159, 162);
+  text-decoration: line-through;
+}
+
+ul li.check::before {
+  background-size: cover;
+  background-position: center;
+  background-image: url(images/checkicon.png);
+}
+
+ul li span {
+  width: 30px;
+  height: 30px;
+  font-size: 35px;
+  color: grey;
+  line-height: 29px;
+  text-align: center;
+  border-radius: 1%;
+  position: absolute;
+  margin-left: 350px;
+}
+
+ul li span:hover {
+  background: rgb(224, 224, 224);
+  border-radius: 50%;
 }

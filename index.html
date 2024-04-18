@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="todolist.css"/>
+    <!-- // links to my downloaded font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" quicksand>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -11,12 +12,19 @@
   </head>
   <body>
     <h1 style="font-family: 'HCGleam', sans-serif;">TASKR</h1>
-    <img class="background" src="images/gradientbg.jpeg" alt="gradient background" />
-    <div class="container">
-      <p class="typeboxtext">just do it - add a task</p>
-
+    <img class="background" src="images/gradientbg.jpeg" alt="gradient background"/>
     
-   </div>
+    <div class="container">
+      <div class="row"> 
+       <input type="text" id="input-text" placeholder="add a task"/>
+       <button onclick="addTask()">ADD</button>
+    </div>
+     <ul id="list-container">
+       <!-- <li class="check">Task 1</li>
+       <li>Task 2</li>
+       <li>Task 3</li> -->
+     </ul>
+  </div>
   </body>
   <script src="todolist.js"></script>
-</html>
+</html> 
