@@ -25,6 +25,8 @@ h1 {
   text-align: center;
 }
 
+/* the code from here on was inspired from this Youtube tutorial: https://www.youtube.com/watch?v=G0jO8kUrg-I&t=765s */
+
 #input-text {
   height: 100%;
   font-family: "quicksand";
