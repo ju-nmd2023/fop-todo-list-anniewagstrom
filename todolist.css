@@ -14,21 +14,14 @@
   object-fit: cover;
 }
 
-@font-face {
-  font-family: "HCGleam";
-  src: url("fonts/font-todolist/HCGleam-Reg.otf") format("opentype");
-  font-display: swap;
-}
-
-
 h1 {
-font-family: "HCGleam", sans-serif;  
+font-family: "Cabin Sketch", sans-serif;  
 font-size: clamp(5rem, 10vw, 10rem);
 margin-top: 20vh;
-color: black;
 text-align: center;
+letter-spacing: 40px;
+text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5); /* NEW */
 }
-/* https://chatgpt.com/share/6835ba67-0a38-8001-9395-f0ee48fb4d2e */
 
 #input-text {
   height: 100%;
