@@ -5,27 +5,30 @@
 }
 
 .background {
-  width: 100%;
-  height: 900px;
-  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
+  object-fit: cover;
 }
 
 @font-face {
   font-family: "HCGleam";
-  src: url("fonts/Font Todolist/HCGleam-Reg.otf") format("opentype");
+  src: url("fonts/font-todolist/HCGleam-Reg.otf") format("opentype");
+  font-display: swap;
 }
+
 
 h1 {
-  font-size: 150px;
-  margin: 0;
-  margin-top: 10%;
-  text-align: center;
+font-family: "HCGleam", sans-serif;  
+font-size: clamp(5rem, 10vw, 10rem);
+margin-top: 20vh;
+color: black;
+text-align: center;
 }
-
-/* the code from here on was inspired from this Youtube tutorial: https://www.youtube.com/watch?v=G0jO8kUrg-I&t=765s */
+/* https://chatgpt.com/share/6835ba67-0a38-8001-9395-f0ee48fb4d2e */
 
 #input-text {
   height: 100%;
@@ -45,31 +48,34 @@ h1 {
   display: block;
   text-align: center;
 }
+
 .row {
-  width: 200px;
-  margin-left: 615px;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto 20px auto;
   display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
   background: aliceblue;
   border-radius: 20px;
-  margin-bottom: 20px;
-  transform: translateY(-50%);
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 input {
-  flex: 1;
-  border: rgb(68, 142, 206);
+  min-width: 0;
   outline: none;
-  background: transparent;
   padding: 10px;
+  flex: 1 1 250px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background: transparent;
+  border: rgb(68, 142, 206);
 }
 
 button {
   border: none;
   outline: none;
-  background: transparent;
   font-family: "quicksand";
   padding: 10px;
   background: rgb(68, 142, 206);
@@ -94,15 +100,15 @@ ul {
 
 ul li {
   list-style: none;
-  font-size: 15px;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
   font-family: "quicksand";
-  padding: 5px;
+  padding: 0.5rem;
   user-select: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   position: relative;
-  margin: 0;
+  margin: 0.25rem 0;
 }
 
 ul li::before {
@@ -137,6 +143,9 @@ ul li span {
   border-radius: 1%;
   position: absolute;
   margin-left: 350px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 ul li span:hover {
